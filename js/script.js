@@ -1,5 +1,25 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Entrance splash
+const splash = document.getElementById('splash');
+const shell = document.getElementById('shell');
+const splashEnter = document.getElementById('splashEnter');
+
+function enterSite() {
+  splash.classList.add('is-hidden');
+  shell.removeAttribute('aria-hidden');
+  shell.removeAttribute('inert');
+}
+
+splashEnter.addEventListener('click', enterSite);
+splash.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') enterSite();
+});
+splashEnter.focus();
+
+shell.setAttribute('aria-hidden', 'true');
+shell.setAttribute('inert', '');
+
 // Theme toggle
 const themeToggle = document.getElementById('themeToggle');
 const root = document.documentElement;

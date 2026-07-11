@@ -22,7 +22,43 @@
 </head>
 <body>
 
-  <div class="shell">
+  <!-- Entrance splash: DV mark left, what the business does right -->
+  <div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Welcome to Dom Valley Management Limited">
+    <div class="splash-left">
+      <svg class="splash-mark" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="dvGoldSplash" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#8a6a1e" />
+            <stop offset="22%" stop-color="#d9b45c" />
+            <stop offset="42%" stop-color="#fff3c4" />
+            <stop offset="58%" stop-color="#caa04a" />
+            <stop offset="78%" stop-color="#8a6a1e" />
+            <stop offset="100%" stop-color="#e8c766" />
+          </linearGradient>
+        </defs>
+        <text x="4" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldSplash)">D</text>
+        <text x="92" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldSplash)">V</text>
+      </svg>
+      <span class="splash-rule"></span>
+      <span class="splash-word">Dom Valley</span>
+    </div>
+
+    <div class="splash-right">
+      <p class="eyebrow">Dom Valley Management Limited</p>
+      <h2 class="splash-heading">Surety Bonds. Bank Guarantees.<br />Business Consultancy.</h2>
+      <p class="splash-desc">We help businesses grow by taking action, not just consulting &mdash; introductions, structuring deals, third-party corporate guarantees, and funding for businesses of any size.</p>
+      <ul class="splash-list">
+        <li>Business &amp; Management Consulting</li>
+        <li>Loans &amp; Commercial Lending</li>
+        <li>Surety Bonds &amp; Bank Guarantees</li>
+        <li>Funding &amp; Investments</li>
+      </ul>
+      <button type="button" class="btn btn-primary splash-enter" id="splashEnter">Enter Site <span aria-hidden="true">&rarr;</span></button>
+      <p class="splash-location">London, England</p>
+    </div>
+  </div>
+
+  <div class="shell" id="shell">
 
     <!-- Sidebar: brand narrative + core CTA, fixed 320px -->
     <aside class="sidebar">

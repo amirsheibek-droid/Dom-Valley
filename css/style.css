@@ -169,6 +169,92 @@ img { max-width: 100%; display: block; }
 .link-arrow span { display: inline-block; transition: transform 0.25s ease; }
 .link-arrow:hover span { transform: translateX(5px); }
 
+/* ---------- Entrance splash ---------- */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bg);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.splash.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.splash-left {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+}
+.splash-mark {
+  width: clamp(120px, 16vw, 220px);
+  height: auto;
+  filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.35));
+}
+.splash-rule {
+  width: 130px;
+  height: 1px;
+  margin: 22px 0 16px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+.splash-word {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 2.4vw, 1.9rem);
+  color: var(--heading);
+}
+
+.splash-right {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6vh 6vw;
+}
+.splash-heading {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  max-width: 520px;
+  margin-bottom: 0.5em;
+}
+.splash-desc { max-width: 460px; font-size: 0.95rem; }
+.splash-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0.4em 0 1.8em;
+}
+.splash-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.86rem;
+  color: var(--text-sub);
+}
+.splash-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 9px;
+  height: 1px;
+  background: var(--accent);
+}
+.splash-location {
+  margin: 1.6em 0 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
 /* ---------- Shell: sidebar + horizontal track, no page scroll ---------- */
 .shell {
   display: flex;
@@ -544,6 +630,13 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Responsive: sidebar becomes a top bar, track panels widen ---------- */
 @media (max-width: 900px) {
+  .splash { flex-direction: column; }
+  .splash-left { flex: 0 0 auto; padding: 5vh 0 3vh; border-right: none; border-bottom: 1px solid var(--border); }
+  .splash-mark { width: clamp(70px, 16vw, 110px); }
+  .splash-rule { margin: 14px 0 10px; }
+  .splash-right { flex: 1 1 auto; padding: 4vh 7vw; }
+  .splash-list { margin: 0.3em 0 1.2em; }
+
   .shell { flex-direction: column; height: 100%; }
   .sidebar {
     width: 100%;
