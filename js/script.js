@@ -1,25 +1,5 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Header background on scroll
-const header = document.getElementById('siteHeader');
-const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
-onScroll();
-window.addEventListener('scroll', onScroll);
-
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const mainNav = document.getElementById('mainNav');
-navToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
-});
-mainNav.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
 // Theme toggle
 const themeToggle = document.getElementById('themeToggle');
 const root = document.documentElement;
@@ -33,6 +13,57 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('dv-theme', 'light');
   }
 });
+
+// Horizontal track navigation
+const track = document.getElementById('scrollTrack');
+const panels = Array.from(track.querySelectorAll('.panel'));
+const dots = Array.from(document.querySelectorAll('[data-panel-link]'));
+
+function scrollToPanel(index) {
+  const panel = panels[index];
+  if (!panel) return;
+  panel.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+}
+
+dots.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollToPanel(Number(el.dataset.index));
+  });
+});
+
+function setActivePanel(index) {
+  dots.forEach((el) => {
+    el.classList.toggle('is-active', Number(el.dataset.index) === index);
+  });
+}
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+          setActivePanel(Number(entry.target.dataset.index));
+        }
+      });
+    },
+    { root: track, threshold: [0.55] }
+  );
+  panels.forEach((panel) => observer.observe(panel));
+}
+
+// Redirect vertical wheel input into horizontal scroll — the page has no
+// vertical scroll, so this keeps a normal mouse/trackpad usable.
+track.addEventListener(
+  'wheel',
+  (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      track.scrollLeft += e.deltaY;
+    }
+  },
+  { passive: false }
+);
 
 // Contact form placeholder submit
 const form = document.getElementById('contactForm');

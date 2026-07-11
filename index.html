@@ -22,40 +22,28 @@
 </head>
 <body>
 
-  <!-- Header / Nav -->
-  <header class="site-header" id="siteHeader">
-    <div class="header-utility">
-      <div class="container header-utility-inner">
-        <span>London, England</span>
-        <span>Surety Bonds &middot; Bank Guarantees &middot; Business Consultancy &middot; Funding</span>
-      </div>
-    </div>
-    <div class="container header-inner">
-      <a href="#top" class="logo">
-        <svg class="logo-mark" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="dvGoldHeader" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#8a6a1e" />
-              <stop offset="22%" stop-color="#d9b45c" />
-              <stop offset="42%" stop-color="#fff3c4" />
-              <stop offset="58%" stop-color="#caa04a" />
-              <stop offset="78%" stop-color="#8a6a1e" />
-              <stop offset="100%" stop-color="#e8c766" />
-            </linearGradient>
-          </defs>
-          <text x="4" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldHeader)">D</text>
-          <text x="92" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldHeader)">V</text>
-        </svg>
-        Dom Valley
-      </a>
+  <div class="shell">
 
-      <div class="header-right">
-        <nav class="main-nav" id="mainNav">
-          <a href="#about"><span class="nav-index">01</span>About</a>
-          <a href="#services"><span class="nav-index">02</span>Services</a>
-          <a href="#why"><span class="nav-index">03</span>Why Us</a>
-          <a href="#contact"><span class="nav-index">04</span>Contact</a>
-        </nav>
+    <!-- Sidebar: brand narrative + core CTA, fixed 320px -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a href="#panel-0" class="logo" data-panel-link data-index="0">
+          <svg class="logo-mark" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="dvGoldSidebar" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8a6a1e" />
+                <stop offset="22%" stop-color="#d9b45c" />
+                <stop offset="42%" stop-color="#fff3c4" />
+                <stop offset="58%" stop-color="#caa04a" />
+                <stop offset="78%" stop-color="#8a6a1e" />
+                <stop offset="100%" stop-color="#e8c766" />
+              </linearGradient>
+            </defs>
+            <text x="4" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldSidebar)">D</text>
+            <text x="92" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldSidebar)">V</text>
+          </svg>
+          Dom Valley
+        </a>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle light / dark theme">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="4"></circle>
@@ -72,239 +60,158 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
       </div>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero" id="top">
-    <div class="hero-media" aria-hidden="true">
-      <div class="hero-placeholder-img">
-        <span class="placeholder-tag">Hero image placeholder</span>
+      <div class="sidebar-narrative">
+        <p class="eyebrow">Management Limited</p>
+        <h1>Consulting for Strategic Success</h1>
+        <p class="sidebar-tagline">Surety Bonds &middot; Bank Guarantees &middot; Business Consultancy &middot; Funding and Investments</p>
+        <p class="sidebar-desc">Dom Valley was established to help businesses grow by taking action, not just consulting.</p>
+        <a href="#panel-4" class="btn btn-primary" data-panel-link data-index="4">Get in Touch</a>
       </div>
-      <div class="hero-overlay"></div>
-    </div>
 
-    <div class="hero-split">
-      <div class="hero-left">
-        <div class="hero-kicker">
-          <svg class="hero-kicker-mark" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <linearGradient id="dvGoldHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#8a6a1e" />
-                <stop offset="22%" stop-color="#d9b45c" />
-                <stop offset="42%" stop-color="#fff3c4" />
-                <stop offset="58%" stop-color="#caa04a" />
-                <stop offset="78%" stop-color="#8a6a1e" />
-                <stop offset="100%" stop-color="#e8c766" />
-              </linearGradient>
-            </defs>
-            <text x="4" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldHero)">D</text>
-            <text x="92" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldHero)">V</text>
-          </svg>
-          <span>Dom Valley Management Limited</span>
+      <nav class="track-nav" aria-label="Section navigation">
+        <button type="button" class="track-dot is-active" data-panel-link data-index="0"><span class="track-dot-index">01</span>Intro</button>
+        <button type="button" class="track-dot" data-panel-link data-index="1"><span class="track-dot-index">02</span>About</button>
+        <button type="button" class="track-dot" data-panel-link data-index="2"><span class="track-dot-index">03</span>Services</button>
+        <button type="button" class="track-dot" data-panel-link data-index="3"><span class="track-dot-index">04</span>Why&nbsp;Us</button>
+        <button type="button" class="track-dot" data-panel-link data-index="4"><span class="track-dot-index">05</span>Contact</button>
+      </nav>
+
+      <p class="sidebar-foot">London, England<br />&copy; <span id="year"></span> Dom Valley Management Limited</p>
+    </aside>
+
+    <!-- Horizontally snapping content track -->
+    <main class="scroll-track" id="scrollTrack">
+
+      <section class="panel panel--intro" id="panel-0" data-index="0">
+        <span class="panel-coord">01 / 05 &mdash; INTRO</span>
+        <div class="panel-inner">
+          <p class="eyebrow">Dom Valley Management Limited</p>
+          <h2 class="panel-headline">Strategic Success,<br />By Design.</h2>
+          <p class="panel-lede">Independent advisory for businesses that want to grow with clarity, discipline and confidence.</p>
         </div>
-        <h1 class="hero-headline">Consulting<br />for Strategic<br />Success</h1>
-        <p class="hero-sub">Surety Bonds &middot; Bank Guarantees &middot; Business Consultancy &middot; Funding and Investments</p>
-        <a href="#services" class="link-arrow">Our Services <span aria-hidden="true">&rarr;</span></a>
-      </div>
+        <span class="panel-hint">Scroll or swipe &rarr;</span>
+      </section>
 
-      <div class="hero-right">
-        <a href="#contact" class="btn btn-primary hero-pin-cta">Get in Touch</a>
-      </div>
-    </div>
-
-    <a href="#about" class="scroll-cue" aria-label="Scroll to content">
-      <span class="scroll-cue-line"></span>
-      <span class="scroll-cue-text">Scroll</span>
-    </a>
-  </section>
-
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-media">
-        <div class="img-placeholder square framed">
-          <span class="placeholder-tag">Team / office photo placeholder</span>
-        </div>
-      </div>
-      <div class="about-copy">
-        <div class="section-marker">
-          <span class="section-index">01</span>
-          <p class="eyebrow">About Us</p>
-        </div>
-        <h2>We help businesses grow by taking action, not just consulting</h2>
-        <p>Dom Valley was established to help businesses grow by taking action, not just consulting — we help with introductions, structuring deals, third-party corporate guarantees, and funding.</p>
-        <p>Our business has a huge amount of experience working with businesses of any size to help them reach their growth targets and ambitions. We strive to constantly add value and look for ways to improve your business income.</p>
-        <ul class="stat-row">
-          <li><span class="stat-num">London</span><span class="stat-label">Based in England</span></li>
-          <li><span class="stat-num">2&ndash;10</span><span class="stat-label">Team Members</span></li>
-          <li><span class="stat-num">Remote</span><span class="stat-label">Or In-Person (London)</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-marker center">
-        <span class="section-index">02</span>
-        <p class="eyebrow">What We Do</p>
-      </div>
-      <h2 class="section-title center">Our Services</h2>
-
-      <div class="services-list">
-        <article class="service-row">
-          <span class="service-index">01</span>
-          <h3 class="service-name">Business Consulting</h3>
-          <p class="service-desc">Hands-on guidance to help you reach your growth targets and ambitions, whatever the size of your business.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </article>
-        <article class="service-row">
-          <span class="service-index">02</span>
-          <h3 class="service-name">Management Consulting</h3>
-          <p class="service-desc">Strategic and operational support to strengthen how your business runs day to day.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </article>
-        <article class="service-row">
-          <span class="service-index">03</span>
-          <h3 class="service-name">Project Management</h3>
-          <p class="service-desc">Structured delivery of key initiatives, from planning through to execution.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </article>
-        <article class="service-row">
-          <span class="service-index">04</span>
-          <h3 class="service-name">Loans &amp; Commercial Lending</h3>
-          <p class="service-desc">Introductions and structuring support to help you secure the right lending for your business.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </article>
-        <article class="service-row">
-          <span class="service-index">05</span>
-          <h3 class="service-name">Surety Bonds &amp; Bank Guarantees</h3>
-          <p class="service-desc">Third-party corporate guarantees that give your business the backing it needs to win and deliver work.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </article>
-        <article class="service-row">
-          <span class="service-index">06</span>
-          <h3 class="service-name">Funding &amp; Investments</h3>
-          <p class="service-desc">Deal structuring and funding routes to turn growth plans into reality.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Us -->
-  <section class="why" id="why">
-    <div class="container why-grid">
-      <div class="why-copy">
-        <div class="section-marker">
-          <span class="section-index">03</span>
-          <p class="eyebrow">Insight. Strategy. Impact.</p>
-        </div>
-        <h2>Success doesn&rsquo;t happen by chance &mdash; it starts with the right strategy</h2>
-        <blockquote class="pull-quote">
-          <p>At Dom Valley Management Limited, we partner with businesses, organizations, and entrepreneurs to solve complex challenges, unlock growth opportunities, and deliver sustainable results. Our consulting approach is built on innovation, integrity, and measurable impact.</p>
-        </blockquote>
-        <p>Whether you&rsquo;re looking to strengthen your operations, improve performance, or plan for long-term success, our team is ready to help you move forward with confidence.</p>
-        <p class="focus-row">Leadership <span>/</span> Business Growth <span>/</span> Organizational Development <span>/</span> Risk Management <span>/</span> Innovation <span>/</span> Sustainable Growth</p>
-      </div>
-      <div class="why-media">
-        <div class="img-placeholder wide framed">
-          <span class="placeholder-tag">Supporting image placeholder</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-intro">
-        <div class="section-marker">
-          <span class="section-index">04</span>
-          <p class="eyebrow">Contact Us</p>
-        </div>
-        <h2>Drop us a line</h2>
-        <p>Tell us about your business and what you&rsquo;re looking to achieve &mdash; we&rsquo;ll come back to you personally.</p>
-        <ul class="spec-list">
-          <li>
-            <span class="spec-label">Location</span>
-            <span class="spec-value">London, England &mdash; remote or in person</span>
-          </li>
-          <li>
-            <span class="spec-label">Website</span>
-            <span class="spec-value"><a href="https://www.dom-valley.com" target="_blank" rel="noopener">www.dom-valley.com</a></span>
-          </li>
-          <li>
-            <span class="spec-label">Pricing</span>
-            <span class="spec-value">Contact for pricing</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="contact-form-wrap framed">
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row">
-            <label class="field">
-              <span class="field-label">Name</span>
-              <input type="text" name="name" placeholder="Name" required />
-            </label>
-            <label class="field">
-              <span class="field-label">Email</span>
-              <input type="email" name="email" placeholder="Email" required />
-            </label>
+      <section class="panel panel--about" id="panel-1" data-index="1">
+        <span class="panel-coord">02 / 05 &mdash; ABOUT</span>
+        <div class="panel-inner">
+          <div class="section-marker">
+            <span class="section-index">01</span>
+            <p class="eyebrow">About Us</p>
           </div>
-          <label class="field">
-            <span class="field-label">Phone</span>
-            <input type="tel" name="phone" placeholder="Phone" />
-          </label>
-          <label class="field">
-            <span class="field-label">Message</span>
-            <textarea name="message" rows="5" placeholder="Message" required></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </div>
-  </section>
+          <h2>We help businesses grow by taking action, not just consulting.</h2>
+          <p>We help with introductions, structuring deals, third-party corporate guarantees, and funding &mdash; working with businesses of any size to reach their growth targets and ambitions.</p>
+          <ul class="stat-row">
+            <li><span class="stat-num">London</span><span class="stat-label">Based in England</span></li>
+            <li><span class="stat-num">2&ndash;10</span><span class="stat-label">Team Members</span></li>
+            <li><span class="stat-num">Remote</span><span class="stat-label">Or In-Person</span></li>
+          </ul>
+          <div class="fig-block framed">
+            <span class="fig-label">FIG. 02 &mdash; Team / office placeholder</span>
+          </div>
+        </div>
+      </section>
 
-  <!-- Closing CTA -->
-  <section class="cta-band">
-    <div class="container cta-band-inner">
-      <p class="cta-band-text">Ready to talk strategy?</p>
-      <a href="#contact" class="link-arrow large">Start the conversation <span aria-hidden="true">&rarr;</span></a>
-    </div>
-  </section>
+      <section class="panel panel--services" id="panel-2" data-index="2">
+        <span class="panel-coord">03 / 05 &mdash; SERVICES</span>
+        <div class="panel-inner">
+          <div class="section-marker">
+            <span class="section-index">02</span>
+            <p class="eyebrow">What We Do</p>
+          </div>
+          <h2>Our Services</h2>
+          <div class="services-grid-compact">
+            <article class="service-tile">
+              <span class="service-tile-index">01</span>
+              <h3>Business Consulting</h3>
+              <p>Hands-on guidance for growth targets and ambitions.</p>
+            </article>
+            <article class="service-tile">
+              <span class="service-tile-index">02</span>
+              <h3>Management Consulting</h3>
+              <p>Strategic and operational support, day to day.</p>
+            </article>
+            <article class="service-tile">
+              <span class="service-tile-index">03</span>
+              <h3>Project Management</h3>
+              <p>Structured delivery, planning through execution.</p>
+            </article>
+            <article class="service-tile">
+              <span class="service-tile-index">04</span>
+              <h3>Loans &amp; Commercial Lending</h3>
+              <p>Introductions and structuring for the right lending.</p>
+            </article>
+            <article class="service-tile">
+              <span class="service-tile-index">05</span>
+              <h3>Surety Bonds &amp; Bank Guarantees</h3>
+              <p>Third-party guarantees to win and deliver work.</p>
+            </article>
+            <article class="service-tile">
+              <span class="service-tile-index">06</span>
+              <h3>Funding &amp; Investments</h3>
+              <p>Deal structuring and routes to fund growth.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="logo small">
-        <svg class="logo-mark" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="dvGoldFooter" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#8a6a1e" />
-              <stop offset="22%" stop-color="#d9b45c" />
-              <stop offset="42%" stop-color="#fff3c4" />
-              <stop offset="58%" stop-color="#caa04a" />
-              <stop offset="78%" stop-color="#8a6a1e" />
-              <stop offset="100%" stop-color="#e8c766" />
-            </linearGradient>
-          </defs>
-          <text x="4" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldFooter)">D</text>
-          <text x="92" y="162" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="168" fill="url(#dvGoldFooter)">V</text>
-        </svg>
-        Dom Valley
-      </span>
-      <p class="footer-tagline">Surety Bonds &middot; Bank Guarantees &middot; Business Consultancy &middot; Funding and Investments</p>
-      <p>&copy; <span id="year"></span> Dom Valley Management Limited. All rights reserved.</p>
-    </div>
-  </footer>
+      <section class="panel panel--why" id="panel-3" data-index="3">
+        <span class="panel-coord">04 / 05 &mdash; WHY US</span>
+        <div class="panel-inner">
+          <div class="section-marker">
+            <span class="section-index">03</span>
+            <p class="eyebrow">Insight. Strategy. Impact.</p>
+          </div>
+          <h2>Success doesn&rsquo;t happen by chance.</h2>
+          <blockquote class="pull-quote">
+            <p>We partner with businesses, organizations, and entrepreneurs to solve complex challenges, unlock growth opportunities, and deliver sustainable results &mdash; built on innovation, integrity, and measurable impact.</p>
+          </blockquote>
+          <p class="focus-row">Leadership <span>/</span> Business Growth <span>/</span> Organizational Development <span>/</span> Risk Management <span>/</span> Innovation <span>/</span> Sustainable Growth</p>
+        </div>
+      </section>
+
+      <section class="panel panel--contact" id="panel-4" data-index="4">
+        <span class="panel-coord">05 / 05 &mdash; CONTACT</span>
+        <div class="panel-inner panel-inner--contact">
+          <div class="contact-intro">
+            <div class="section-marker">
+              <span class="section-index">04</span>
+              <p class="eyebrow">Contact Us</p>
+            </div>
+            <h2>Drop us a line</h2>
+            <ul class="spec-list">
+              <li><span class="spec-label">Location</span><span class="spec-value">London, England</span></li>
+              <li><span class="spec-label">Website</span><span class="spec-value"><a href="https://www.dom-valley.com" target="_blank" rel="noopener">www.dom-valley.com</a></span></li>
+              <li><span class="spec-label">Pricing</span><span class="spec-value">Contact for pricing</span></li>
+            </ul>
+          </div>
+          <div class="contact-form-wrap framed">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <label class="field">
+                  <span class="field-label">Name</span>
+                  <input type="text" name="name" placeholder="Name" required />
+                </label>
+                <label class="field">
+                  <span class="field-label">Email</span>
+                  <input type="email" name="email" placeholder="Email" required />
+                </label>
+              </div>
+              <label class="field">
+                <span class="field-label">Message</span>
+                <textarea name="message" rows="3" placeholder="Message" required></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
