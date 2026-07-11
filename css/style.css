@@ -33,44 +33,56 @@
   --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0.75) 100%);
   --scroll-cue: rgba(255, 255, 255, 0.6);
 
+  --fw-base: 300;
+  --fw-heading: 500;
+  --fw-label: 400;
+  --bg-card: #131313;
+
   --shadow: none;
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --bg: #faf9f6;
-  --bg-alt: #f2f0ea;
-  --bg-deep: #eeece4;
-  --bg-footer: #e7e4da;
-  --bg-header-scrolled: rgba(250, 249, 246, 0.92);
-  --bg-mobile-nav: rgba(250, 249, 246, 0.97);
+  /* Warm ivory / charcoal / gold — matched to the Dom Valley logo & brand banner */
+  --bg: #f5f0e3;
+  --bg-alt: #efe7d3;
+  --bg-deep: #e9dfc5;
+  --bg-footer: #e1d5b4;
+  --bg-header-scrolled: rgba(245, 240, 227, 0.92);
+  --bg-mobile-nav: rgba(245, 240, 227, 0.97);
+  --bg-card: #fbf8f0;
 
-  --heading: #171512;
-  --text-body: #4a4740;
-  --text-sub: #3d3a34;
-  --text-muted: #6b6860;
-  --text-faint: #85817a;
-  --text-placeholder: #aca697;
-  --nav-text: #2a2823;
+  --heading: #262420;
+  --text-body: #47433a;
+  --text-sub: #363228;
+  --text-muted: #635c4c;
+  --text-faint: #7c745f;
+  --text-placeholder: #a89c7e;
+  --nav-text: #2c2920;
 
-  --border: rgba(20, 18, 12, 0.1);
-  --border-strong: rgba(20, 18, 12, 0.3);
-  --border-soft: rgba(20, 18, 12, 0.16);
+  --border: rgba(38, 32, 12, 0.14);
+  --border-strong: rgba(38, 32, 12, 0.36);
+  --border-soft: rgba(38, 32, 12, 0.2);
 
-  --accent: #b08d57;
-  --accent-text: #8a6a2f;
-  --on-accent: #14120d;
+  --accent: #a9822f;
+  --accent-text: #8a6a1e;
+  --on-accent: #1c1408;
 
-  --placeholder-bg: linear-gradient(135deg, #ece8de, #dfdaca);
-  --placeholder-pattern: rgba(20, 18, 12, 0.05);
-  --placeholder-border: rgba(20, 18, 12, 0.22);
-  --placeholder-text: rgba(20, 18, 12, 0.4);
+  --placeholder-bg: linear-gradient(135deg, #efe7d3, #ddd0a8);
+  --placeholder-pattern: rgba(38, 32, 12, 0.06);
+  --placeholder-border: rgba(38, 32, 12, 0.28);
+  --placeholder-text: rgba(38, 32, 12, 0.45);
 
-  --hero-bg: linear-gradient(160deg, #efe9db 0%, #f7f5f0 55%, #f1e6cd 100%);
-  --hero-pattern: rgba(20, 18, 12, 0.035);
-  --hero-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 45%, rgba(255, 255, 255, 0.55) 100%);
-  --scroll-cue: rgba(20, 18, 12, 0.55);
+  --hero-bg: linear-gradient(160deg, #eee4c8 0%, #f8f3e6 55%, #ecdba8 100%);
+  --hero-pattern: rgba(38, 32, 12, 0.045);
+  --hero-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.08) 45%, rgba(255, 255, 255, 0.55) 100%);
+  --scroll-cue: rgba(38, 32, 12, 0.6);
 
+  --fw-base: 500;
+  --fw-heading: 600;
+  --fw-label: 600;
+
+  font-size: 17.5px;
   color-scheme: light;
 }
 
@@ -82,12 +94,12 @@ body {
   background: var(--bg);
   color: var(--heading);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 300;
+  font-weight: var(--fw-base);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   transition: background 0.3s ease, color 0.3s ease;
 }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; margin: 0 0 0.5em; color: var(--heading); }
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: var(--fw-heading); margin: 0 0 0.5em; color: var(--heading); }
 p { margin: 0 0 1em; color: var(--text-body); }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; margin: 0; padding: 0; }
@@ -105,6 +117,7 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.75rem;
+  font-weight: var(--fw-label);
   color: var(--accent-text);
   margin-bottom: 0.75em;
 }
@@ -125,6 +138,7 @@ img { max-width: 100%; display: block; }
   padding: 14px 32px;
   border-radius: 2px;
   font-size: 0.85rem;
+  font-weight: var(--fw-label);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border: 1px solid transparent;
@@ -184,6 +198,7 @@ img { max-width: 100%; display: block; }
 .main-nav { display: flex; gap: 36px; }
 .main-nav a {
   font-size: 0.8rem;
+  font-weight: var(--fw-label);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--nav-text);
@@ -382,6 +397,7 @@ img { max-width: 100%; display: block; }
 .stat-label {
   display: block;
   font-size: 0.75rem;
+  font-weight: var(--fw-label);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -397,11 +413,12 @@ img { max-width: 100%; display: block; }
 }
 .service-card {
   padding: 40px 26px;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   text-align: center;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
-.service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.service-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 28px rgba(38, 32, 12, 0.1); }
 .service-icon {
   color: var(--accent-text);
   font-size: 1.4rem;
@@ -427,6 +444,7 @@ img { max-width: 100%; display: block; }
 }
 .tag-list li {
   font-size: 0.72rem;
+  font-weight: var(--fw-label);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-sub);
@@ -460,6 +478,7 @@ img { max-width: 100%; display: block; }
 .field-label {
   display: block;
   font-size: 0.72rem;
+  font-weight: var(--fw-label);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
