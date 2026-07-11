@@ -20,6 +20,20 @@ mainNav.querySelectorAll('a').forEach((link) => {
   });
 });
 
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+themeToggle.addEventListener('click', () => {
+  const isLight = root.getAttribute('data-theme') === 'light';
+  if (isLight) {
+    root.removeAttribute('data-theme');
+    localStorage.setItem('dv-theme', 'dark');
+  } else {
+    root.setAttribute('data-theme', 'light');
+    localStorage.setItem('dv-theme', 'light');
+  }
+});
+
 // Contact form placeholder submit
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
