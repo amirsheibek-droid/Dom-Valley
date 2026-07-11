@@ -4,27 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dom Valley</title>
+<meta name="description" content="Dom Valley — bold brand and product work.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Cpath d='M8 48 L32 12 L56 48 Z' fill='none' stroke='%23fff' stroke-width='6'/%3E%3C/svg%3E">
 <style>
   :root {
     color-scheme: dark;
+    --nav-h: 4.5rem;
   }
 
   * { box-sizing: border-box; }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
-    height: 100%;
     margin: 0;
   }
 
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    background: #fff;
   }
+
+  a { color: inherit; }
+
+  /* ---------- Nav ---------- */
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-h);
+    padding: 0 1.5rem;
+    background: #000;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.125rem;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .logo__mark {
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    background: #fff;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav__links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition: color 0.2s ease;
+  }
+
+  .nav__links a:hover {
+    color: #fff;
+  }
+
+  /* ---------- Hero ---------- */
 
   .hero {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: calc(100vh - var(--nav-h));
     width: 100%;
   }
 
@@ -33,7 +100,7 @@
     align-items: center;
     width: 100%;
     background: #000;
-    padding: 6rem 2rem;
+    padding: 4rem 1.5rem;
   }
 
   .hero__title {
@@ -74,7 +141,188 @@
     color: #000;
   }
 
+  /* ---------- Shared section scaffolding ---------- */
+
+  .section {
+    padding: 6rem 1.5rem;
+  }
+
+  .section--dark {
+    background: #000;
+    color: #fff;
+  }
+
+  .section__inner {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    display: block;
+    margin: 0 0 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+  }
+
+  /* ---------- About ---------- */
+
+  .about__grid {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .about__statement {
+    margin: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    font-size: 2.5rem;
+  }
+
+  .about__body {
+    margin: 0;
+    max-width: 34rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  /* ---------- Work / pillars ---------- */
+
+  .pillars {
+    display: grid;
+    gap: 3rem;
+  }
+
+  .pillar__index {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .pillar__title {
+    margin: 0 0 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    font-size: 1.75rem;
+  }
+
+  .pillar__body {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.6;
+  }
+
+  .pillar {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 2rem;
+  }
+
+  /* ---------- CTA banner ---------- */
+
+  .cta-banner {
+    text-align: center;
+  }
+
+  .cta-banner__title {
+    margin: 0 0 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    font-size: 2.75rem;
+  }
+
+  .cta-banner__button {
+    display: inline-block;
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .cta-banner__button:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  /* ---------- Footer ---------- */
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    background: #000;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer__links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition: color 0.2s ease;
+  }
+
+  .footer__links a:hover {
+    color: #fff;
+  }
+
+  .footer__meta {
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---------- Breakpoints ---------- */
+
+  @media (min-width: 640px) {
+    .hero__left { padding: 4rem 3rem; }
+  }
+
+  @media (min-width: 768px) {
+    .pillars {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__grid {
+      grid-template-columns: 1.1fr 1fr;
+      align-items: end;
+    }
+  }
+
   @media (min-width: 1024px) {
+    .nav { padding: 0 3rem; }
+
     .hero {
       flex-direction: row;
     }
@@ -92,24 +340,111 @@
       width: 40%;
       min-height: 0;
     }
+
+    .section { padding: 8rem 3rem; }
+
+    .about__statement { font-size: 3.5rem; }
+
+    .cta-banner__title { font-size: 4rem; }
+  }
+
+  @media (min-width: 640px) {
+    .footer__top {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 </style>
 </head>
 <body>
 
-<section class="hero">
+<header class="nav">
+  <a href="#top" class="logo">
+    <span class="logo__mark" aria-hidden="true"></span>
+    Dom Valley
+  </a>
+  <ul class="nav__links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</header>
 
-  <!-- Left panel: 60% width, massive bold typography -->
-  <div class="hero__left">
-    <h1 class="hero__title">Dom<br>Valley</h1>
+<main id="top">
+
+  <section class="hero">
+
+    <!-- Left panel: 60% width, massive bold typography -->
+    <div class="hero__left">
+      <h1 class="hero__title">Dom<br>Valley</h1>
+    </div>
+
+    <!-- Right panel: 40% width, empty negative space -->
+    <div class="hero__right">
+      <a href="#contact" class="hero__cta">Enter</a>
+    </div>
+
+  </section>
+
+  <section id="about" class="section">
+    <div class="section__inner about__grid">
+      <p class="about__statement">We build brands that refuse to blend in.</p>
+      <p class="about__body">
+        Dom Valley is a small studio working at the edge of brand and product.
+        No templates, no committees — just sharp thinking, bold typography,
+        and work built to be looked at twice.
+      </p>
+    </div>
+  </section>
+
+  <section id="work" class="section section--dark">
+    <div class="section__inner">
+      <span class="eyebrow">What we do</span>
+      <div class="pillars">
+        <div class="pillar">
+          <p class="pillar__index">01</p>
+          <h3 class="pillar__title">Brand</h3>
+          <p class="pillar__body">Identity systems built on a single idea, held together with obsessive discipline.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar__index">02</p>
+          <h3 class="pillar__title">Product</h3>
+          <p class="pillar__body">Interfaces designed to disappear, so the work underneath can speak for itself.</p>
+        </div>
+        <div class="pillar">
+          <p class="pillar__index">03</p>
+          <h3 class="pillar__title">Motion</h3>
+          <p class="pillar__body">Movement with intent — never decoration, always direction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section cta-banner">
+    <div class="section__inner">
+      <span class="eyebrow">Let's talk</span>
+      <h2 class="cta-banner__title">Got something worth building?</h2>
+      <a href="mailto:hello@domvalley.com" class="cta-banner__button">Start a project</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#top" class="logo">
+      <span class="logo__mark" aria-hidden="true"></span>
+      Dom Valley
+    </a>
+    <ul class="footer__links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-
-  <!-- Right panel: 40% width, empty negative space -->
-  <div class="hero__right">
-    <a href="#contact" class="hero__cta">Enter</a>
-  </div>
-
-</section>
+  <p class="footer__meta">&copy; 2026 Dom Valley. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
