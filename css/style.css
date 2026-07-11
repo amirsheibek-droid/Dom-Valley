@@ -197,20 +197,33 @@ img { max-width: 100%; display: block; }
 }
 .sidebar-top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
-.logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
+.brand-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.brand-mark {
+  width: 52px;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
+}
+.brand-rule {
+  width: 60px;
+  height: 1px;
+  margin: 10px 0 8px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+.brand-word {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
-  letter-spacing: 0.2em;
-  font-size: 0.95rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
   color: var(--heading);
 }
-.logo-mark { width: 26px; height: 26px; flex-shrink: 0; }
 
 .theme-toggle {
   display: inline-flex;
