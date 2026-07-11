@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dom Valley Management Ltd | Consulting for Strategic Success</title>
+  <meta name="description" content="Dom Valley Management Ltd — strategic consulting, financial advisory and business growth services." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo">DOM VALLEY</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-media" aria-hidden="true">
+      <div class="hero-placeholder-img">
+        <span class="placeholder-tag">Hero image placeholder</span>
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content container">
+      <p class="eyebrow">Dom Valley Management Ltd</p>
+      <h1>Consulting for Strategic&nbsp;Success</h1>
+      <p class="hero-sub">Independent advisory for businesses that want to grow with clarity, discipline and confidence.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#services" class="btn btn-ghost">Our Services</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll to content">↓</a>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <div class="img-placeholder square">
+          <span class="placeholder-tag">Team / office photo placeholder</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">About Us</p>
+        <h2>Trusted advisors behind lasting decisions</h2>
+        <p>Dom Valley Management Ltd is a management consultancy placeholder description. Replace this paragraph with your firm's story — who you are, the markets you serve, and the philosophy that shapes how you advise clients.</p>
+        <p>We partner with leadership teams to turn strategy into measurable outcomes, combining rigorous analysis with hands-on execution support.</p>
+        <ul class="stat-row">
+          <li><span class="stat-num">00</span><span class="stat-label">Years of Experience</span></li>
+          <li><span class="stat-num">00</span><span class="stat-label">Clients Served</span></li>
+          <li><span class="stat-num">00</span><span class="stat-label">Projects Delivered</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <p class="eyebrow center">What We Do</p>
+      <h2 class="section-title center">Our Services</h2>
+      <div class="section-divider"></div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">◆</div>
+          <h3>Strategy Consulting</h3>
+          <p>Placeholder copy describing strategic planning, market positioning and long-term roadmapping services.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">◆</div>
+          <h3>Financial Advisory</h3>
+          <p>Placeholder copy describing financial structuring, forecasting and investment readiness services.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">◆</div>
+          <h3>Business Growth</h3>
+          <p>Placeholder copy describing operational efficiency, scaling support and growth acceleration services.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">◆</div>
+          <h3>Risk &amp; Compliance</h3>
+          <p>Placeholder copy describing governance, regulatory alignment and risk management services.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why" id="why">
+    <div class="container why-grid">
+      <div class="why-copy">
+        <p class="eyebrow">Why Dom Valley</p>
+        <h2>Results-driven partnership, not just advice</h2>
+        <p>Placeholder paragraph explaining the firm's differentiators — depth of expertise, tailored engagement models, and a track record of measurable impact for clients.</p>
+      </div>
+      <div class="why-media">
+        <div class="img-placeholder wide">
+          <span class="placeholder-tag">Supporting image placeholder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title center">Contact Us</h2>
+      <div class="section-divider"></div>
+      <p class="contact-sub">Drop us a line!</p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <label class="field">
+            <span class="field-label">Name</span>
+            <input type="text" name="name" placeholder="Name" required />
+          </label>
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input type="email" name="email" placeholder="Email" required />
+          </label>
+        </div>
+        <label class="field">
+          <span class="field-label">Phone</span>
+          <input type="tel" name="phone" placeholder="Phone" />
+        </label>
+        <label class="field">
+          <span class="field-label">Message</span>
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-details">
+        <div>
+          <span class="field-label">Address</span>
+          <p>Placeholder Address, City, Country</p>
+        </div>
+        <div>
+          <span class="field-label">Email</span>
+          <p>info@dom-valley.com</p>
+        </div>
+        <div>
+          <span class="field-label">Phone</span>
+          <p>+00 000 000 0000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="logo small">DOM VALLEY</span>
+      <p>&copy; <span id="year"></span> Dom Valley Management Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
