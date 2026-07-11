@@ -265,7 +265,7 @@ img { max-width: 100%; display: block; }
 .services { padding: 120px 0; background: #0c0c0c; }
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 .service-card {
@@ -292,6 +292,21 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 .why h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+.tag-list li {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d9d6cf;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 7px 14px;
+}
 
 /* ---------- Contact ---------- */
 .contact { padding: 120px 0 100px; background: #0a0a0a; text-align: center; }
@@ -373,9 +388,17 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px 24px;
 }
 .footer-inner p { margin: 0; font-size: 0.82rem; color: #7a776f; }
+.footer-tagline {
+  flex: 1 1 100%;
+  order: 3;
+  font-size: 0.75rem !important;
+  color: #55534d !important;
+}
+.contact-details a { color: #b08d57; }
+.contact-details a:hover { text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
