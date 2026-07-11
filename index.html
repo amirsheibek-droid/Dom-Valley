@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dom Valley</title>
+<style>
+  :root {
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .hero__left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #000;
+    padding: 6rem 2rem;
+  }
+
+  .hero__title {
+    margin: 0;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    font-size: 3.75rem;
+  }
+
+  .hero__right {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    background: #fff;
+  }
+
+  .hero__cta {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .hero__cta:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      flex-direction: row;
+    }
+
+    .hero__left {
+      width: 60%;
+      padding: 0 5rem;
+    }
+
+    .hero__title {
+      font-size: 6rem;
+    }
+
+    .hero__right {
+      width: 40%;
+      min-height: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+  <!-- Left panel: 60% width, massive bold typography -->
+  <div class="hero__left">
+    <h1 class="hero__title">Dom<br>Valley</h1>
+  </div>
+
+  <!-- Right panel: 40% width, empty negative space -->
+  <div class="hero__right">
+    <a href="#contact" class="hero__cta">Enter</a>
+  </div>
+
+</section>
+
+</body>
+</html>
