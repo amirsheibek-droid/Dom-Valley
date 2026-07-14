@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200">
+  <defs>
+    <linearGradient id="dvGoldFavicon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a6a1e" />
+      <stop offset="22%" stop-color="#d9b45c" />
+      <stop offset="42%" stop-color="#fff3c4" />
+      <stop offset="58%" stop-color="#caa04a" />
+      <stop offset="78%" stop-color="#8a6a1e" />
+      <stop offset="100%" stop-color="#e8c766" />
+    </linearGradient>
+  </defs>
+  <rect width="220" height="200" fill="#0c0c0c" />
+  <text x="4" y="162" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="168" fill="url(#dvGoldFavicon)">D</text>
+  <text x="92" y="162" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="168" fill="url(#dvGoldFavicon)">V</text>
+</svg>
